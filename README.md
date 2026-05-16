@@ -1,48 +1,115 @@
-# 📋 Team Task Manager (TaskFlow)
+# MayProject
 
-A full-stack MERN application for managing team projects and tasks with role-based access control.
+Welcome to **MayProject** — a full-stack application with a robust backend and modern frontend.
 
-## 🚀 Getting Started
+## 🚀 Live Deployments
+
+- **Frontend**: [https://frontend-umber-beta-97.vercel.app/](https://frontend-umber-beta-97.vercel.app/)
+- **Backend API**: [https://mayproject-production.up.railway.app](https://mayproject-production.up.railway.app)
+
+## 📋 Project Structure
+
+This repository contains both the backend logic and configuration for MayProject. The frontend is deployed separately on Vercel and communicates with this backend API.
+
+### Backend
+- **Hosting**: Railway
+- **URL**: https://mayproject-production.up.railway.app
+
+### Frontend
+- **Hosting**: Vercel
+- **URL**: https://frontend-umber-beta-97.vercel.app/
+
+## 🛠️ Technology Stack
+
+### Backend
+- Node.js / Express
+- MongoDB (or your database)
+- REST API endpoints
+- Deployed on Railway
+
+### Frontend
+- React with Vite
+- Modern UI/UX
+- Tailwind CSS
+- Deployed on Vercel
+
+## 📦 Getting Started
 
 ### Prerequisites
 - Node.js v18+
-- MongoDB Atlas account (or local MongoDB)
+- npm or yarn
 
-### Backend Setup
+### Installation
 
+1. Clone the repository:
+```bash
+git clone https://github.com/tipticloud/MayProject.git
+cd MayProject
+```
+
+2. Install backend dependencies:
 ```bash
 cd backend
 npm install
 ```
 
-Update `.env` with your MongoDB URI and JWT secret:
-```
-MONGO_URI=mongodb+srv://<user>:<password>@cluster0.mongodb.net/taskmanager
-JWT_SECRET=your_super_secret_key
-```
-
-```bash
-npm run dev
-```
-
-### Frontend Setup
-
+3. Install frontend dependencies:
 ```bash
 cd frontend
 npm install
+```
+
+4. Configure environment variables:
+```bash
+cp .env.example .env.local
+```
+
+5. Start the development server:
+```bash
+# Terminal 1 - Backend
+cd backend
+npm run dev
+
+# Terminal 2 - Frontend
+cd frontend
 npm run dev
 ```
 
-Open http://localhost:5173
+Open http://localhost:5173 for the frontend.
 
-## 🔐 Roles
+## 🔗 API Integration
 
-| Role   | Permissions |
-|--------|-------------|
-| Admin  | Create/edit/delete projects & tasks, assign members |
-| Member | View projects they belong to, update status of their tasks |
+The frontend communicates with the backend API at:
+```
+https://mayproject-production.up.railway.app
+```
 
-## 📁 Tech Stack
+Ensure your `.env` files are properly configured with the correct API endpoints.
 
-- **Frontend**: React, Vite, Tailwind CSS, React Router, Axios
-- **Backend**: Node.js, Express, MongoDB, Mongoose, JWT
+## 📝 Available Scripts
+
+**Backend:**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+
+**Frontend:**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Support
+
+For issues or questions, please open a GitHub issue in this repository.
+
+---
+
+**Last Updated**: May 16, 2026
